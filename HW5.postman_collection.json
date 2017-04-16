@@ -1,0 +1,162 @@
+{
+	"variables": [],
+	"info": {
+		"name": "HW5",
+		"_postman_id": "f88e5952-3ac0-6422-fa41-29f674a17a71",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://coronach-test.apigee.net/HW5/movies",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW5/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Sal\",         \r\n\"lastName\": \"Lopez\",          \r\n\"age\": 44,\r\n\"height\": 67\r\n},    \r\n{ \"firstName\": \"William\",        \r\n\"lastName\": \"Forsythe\",         \r\n\"age\": 43,\r\n\"height\": 73\r\n},        \r\n{\"firstName\": \"Edward\",          \r\n\"lastName\": \"Olmos\",         \r\n\"age\": 33, \r\n\"height\": 72\t\r\n}],      \r\n\"ID\": \"006\",     \r\n\"name\": \"American Me\",      \r\n\"year\": 1992    }}\r\n"
+				},
+				"description": "movie created with new code for dups"
+			},
+			"response": []
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW5/movies",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW5/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Sal\",         \r\n\"lastName\": \"Lopez\",          \r\n\"age\": 44,\r\n\"height\": 67\r\n},    \r\n{ \"firstName\": \"William\",        \r\n\"lastName\": \"Forsythe\",         \r\n\"age\": 43,\r\n\"height\": 73\r\n},        \r\n{\"firstName\": \"Edward\",          \r\n\"lastName\": \"Olmos\",         \r\n\"age\": 33, \r\n\"height\": 72\t\r\n}],      \r\n\"ID\": \"006\",     \r\n\"name\": \"American Me\",      \r\n\"year\": 1992    }}\r\n"
+				},
+				"description": "dup movie"
+			},
+			"response": []
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW5/movies/559687cc-2261-11e7-a2c2-122e0737977d",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW5/movies/559687cc-2261-11e7-a2c2-122e0737977d",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "get a movie with the review parameters but not displayed"
+			},
+			"response": []
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW5/movies/559687cc-2261-11e7-a2c2-122e0737977d",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW5/movies/559687cc-2261-11e7-a2c2-122e0737977d",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"reviewer\": \"chris\",\r\n\"review\": \"this is a great movie\",\r\n\"score\": 5\r\n}"
+				},
+				"description": "added the review"
+			},
+			"response": []
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW5/movies/559687cc-2261-11e7-a2c2-122e0737977d",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW5/movies/559687cc-2261-11e7-a2c2-122e0737977d?reviews=true",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"reviewer\": \"chris\",\r\n\"review\": \"this is a great movie\",\r\n\"score\": 5\r\n}"
+				},
+				"description": "getting the movie with the review written"
+			},
+			"response": []
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW5/movies/559687cc-2261-11e7-a2c2-122e0737977d",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW5/movies/559687cc-2261-11e7-a2c2-122e07379?reviews=true",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"reviewer\": \"chris\",\r\n\"review\": \"this is a great movie\",\r\n\"score\": 5\r\n}"
+				},
+				"description": "nonexisting movie with review"
+			},
+			"response": []
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW5/movies/559687cc-2261-11e7-a2c2-122e0737977d",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW5/movies/559687cc-2261-11e7-a2c2-122e0",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"reviewer\": \"chris\",\r\n\"review\": \"this is a great movie\",\r\n\"score\": 5\r\n}"
+				},
+				"description": "nonexisting moview adding a review"
+			},
+			"response": []
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW5/movies/c9fd5c49-174b-11e7-990c-0eec2415f3df",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW5/movies/c9fd5c49-174b-11e7-990c-0eec2415f3df",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"reviewer\": \"chris\",\r\n\"review\": \"this is a great movie\",\r\n\"score\": 5\r\n}"
+				},
+				"description": "cannot add a review to a movie from HW4 since it doesnt have the review parameters"
+			},
+			"response": []
+		}
+	]
+}

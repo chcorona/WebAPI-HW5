@@ -1,0 +1,1723 @@
+{
+	"variables": [],
+	"info": {
+		"name": "HW4",
+		"_postman_id": "9e43d219-c3ea-d720-65a3-c53905e04a93",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://coronach-test.apigee.net/HW4/movies",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW4/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Kate\",         \r\n\"lastName\": \"Beckinsale\",          \r\n\"age\": 44,\r\n\"height\": 67\r\n},    \r\n{ \"firstName\": \"Tobias\",        \r\n\"lastName\": \"Menzies\",         \r\n\"age\": 43,\r\n\"height\": 73\r\n},        \r\n{\"firstName\": \"Theo\",          \r\n\"lastName\": \"James\",         \r\n\"age\": 33, \r\n\"height\": 72\t\r\n}],      \r\n\"ID\": \"003\",     \r\n\"title\": \"Underworld: Blood Wars\",      \r\n\"year\": 2016    }}\r\n"
+				},
+				"description": "posting a movie using post"
+			},
+			"response": [
+				{
+					"id": "62f7cdf4-063e-4d57-a073-d0de0044d83f",
+					"name": "creating a new movie",
+					"originalRequest": {
+						"url": "http://coronach-test.apigee.net/HW4/movies",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Kate\",         \r\n\"lastName\": \"Beckinsale\",          \r\n\"age\": 44,\r\n\"height\": 67\r\n},    \r\n{ \"firstName\": \"Tobias\",        \r\n\"lastName\": \"Menzies\",         \r\n\"age\": 43,\r\n\"height\": 73\r\n},        \r\n{\"firstName\": \"Theo\",          \r\n\"lastName\": \"James\",         \r\n\"age\": 33, \r\n\"height\": 72\t\r\n}],      \r\n\"ID\": \"003\",     \r\n\"title\": \"Underworld: Blood Wars\",      \r\n\"year\": 2016    }}\r\n"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1580",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2017 02:05:34 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"62c-MPHMMzjyt8RwOgzkVVu9Jqw2v1k\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 609,
+					"body": "{\"message\":\"A movie have successfully been created\",\"movie\":{\"statusCode\":200,\"body\":{\"action\":\"post\",\"application\":\"b1013b47-1642-11e7-990c-0eec2415f3df\",\"params\":{},\"path\":\"/movies\",\"uri\":\"https://apibaas-trial.apigee.net/coronach/sandbox/movies\",\"entities\":[{\"uuid\":\"db342034-1748-11e7-990c-0eec2415f3df\",\"type\":\"movie\",\"created\":1491098734080,\"modified\":1491098734080,\"actors\":[{\"firstName\":\"Kate\",\"lastName\":\"Beckinsale\",\"age\":44,\"height\":67},{\"firstName\":\"Tobias\",\"lastName\":\"Menzies\",\"age\":43,\"height\":73},{\"firstName\":\"Theo\",\"lastName\":\"James\",\"age\":33,\"height\":72}],\"ID\":\"003\",\"metadata\":{\"path\":\"/movies/db342034-1748-11e7-990c-0eec2415f3df\",\"size\":799},\"title\":\"Underworld: Blood Wars\",\"year\":2016}],\"timestamp\":1491098734069,\"duration\":40,\"organization\":\"coronach\",\"applicationName\":\"sandbox\"},\"headers\":{\"access-control-allow-origin\":\"*\",\"content-type\":\"application/json\",\"date\":\"Sun, 02 Apr 2017 02:05:34 GMT\",\"server\":\"Apache-Coyote/1.1\",\"set-cookie\":[\"rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Sat, 01-Apr-2017 02:05:34 GMT\"],\"content-length\":\"990\",\"connection\":\"keep-alive\"},\"request\":{\"uri\":{\"protocol\":\"https:\",\"slashes\":true,\"auth\":null,\"host\":\"apibaas-trial.apigee.net\",\"port\":443,\"hostname\":\"apibaas-trial.apigee.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/coronach/sandbox/movie/\",\"path\":\"/coronach/sandbox/movie/\",\"href\":\"https://apibaas-trial.apigee.net/coronach/sandbox/movie/\"},\"method\":\"POST\",\"headers\":{\"User-Agent\":\"usergrid-nodejs/v2.0.0-rc.2\",\"accept\":\"application/json\",\"content-type\":\"application/json\",\"content-length\":275}}}}"
+				},
+				{
+					"id": "031fbcba-b00b-4547-94f0-e98bacc04c9f",
+					"name": "Getting all the movies",
+					"originalRequest": {
+						"url": "http://coronach-test.apigee.net/HW4/movies",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Damian\",         \r\n\"lastName\": \"Chapa\",          \r\n\"age\": 54,\r\n\"height\": 71\r\n},    \r\n{ \"firstName\": \"Jesse\",        \r\n\"lastName\": \"Borrego\",         \r\n\"age\": 55,\r\n\"height\": 74\r\n},        \r\n{\"firstName\": \"Benjamin\",          \r\n\"lastName\": \"Bratt\",         \r\n\"age\": 54, \r\n\"height\": 74\t\r\n}],      \r\n\"ID\": \"006\",     \r\n\"title\": \"Blood In, Blood Out\",      \r\n\"year\": 1993   }}\r\n"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2660",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2017 02:26:44 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a64-vF9vIY2SQR7H0/LwJgxYMDlxxXA\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 257,
+					"body": "{\"movies\":[{\"uuid\":\"c9fd5c49-174b-11e7-990c-0eec2415f3df\",\"type\":\"movie\",\"created\":1491099993690,\"modified\":1491099993917,\"actors\":[{\"firstName\":\"Damian\",\"lastName\":\"Chapa\",\"age\":54,\"height\":71},{\"firstName\":\"Jesse\",\"lastName\":\"Borrego\",\"age\":55,\"height\":74},{\"firstName\":\"Benjamin\",\"lastName\":\"Bratt\",\"age\":54,\"height\":74}],\"ID\":\"006\",\"metadata\":{\"path\":\"/movies/c9fd5c49-174b-11e7-990c-0eec2415f3df\",\"size\":905},\"title\":\"Blood In, Blood Out\",\"year\":1993},{\"uuid\":\"f1951ec9-174a-11e7-a2c2-122e0737977d\",\"type\":\"movie\",\"created\":1491099630619,\"modified\":1491099630842,\"actors\":[{\"firstName\":\"Ice\",\"lastName\":\"Cube\",\"age\":48,\"height\":68},{\"firstName\":\"Chris\",\"lastName\":\"Tucker\",\"age\":45,\"height\":73},{\"firstName\":\"Nia\",\"lastName\":\"Long\",\"age\":47,\"height\":62}],\"ID\":\"005\",\"metadata\":{\"path\":\"/movies/f1951ec9-174a-11e7-a2c2-122e0737977d\",\"size\":882},\"title\":\"Friday \",\"year\":1995},{\"uuid\":\"180440fc-174a-11e7-a2c2-122e0737977d\",\"type\":\"movie\",\"created\":1491099265604,\"modified\":1491099265841,\"actors\":[{\"firstName\":\"Tom\",\"lastName\":\"Hardy\",\"age\":40,\"height\":69},{\"firstName\":\"Charlize\",\"lastName\":\"Theron\",\"age\":42,\"height\":69},{\"firstName\":\"Nicholas\",\"lastName\":\"Hoult\",\"age\":28,\"height\":74}],\"ID\":\"004\",\"metadata\":{\"path\":\"/movies/180440fc-174a-11e7-a2c2-122e0737977d\",\"size\":903},\"title\":\"Mad Max: Fury Road\",\"year\":2015},{\"uuid\":\"db342034-1748-11e7-990c-0eec2415f3df\",\"type\":\"movie\",\"created\":1491098734080,\"modified\":1491098734324,\"actors\":[{\"firstName\":\"Kate\",\"lastName\":\"Beckinsale\",\"age\":44,\"height\":67},{\"firstName\":\"Tobias\",\"lastName\":\"Menzies\",\"age\":43,\"height\":73},{\"firstName\":\"Theo\",\"lastName\":\"James\",\"age\":33,\"height\":72}],\"ID\":\"003\",\"metadata\":{\"path\":\"/movies/db342034-1748-11e7-990c-0eec2415f3df\",\"size\":908},\"title\":\"Underworld: Blood Wars\",\"year\":2016},{\"uuid\":\"5d0cbf0a-1748-11e7-9fee-0ad881f403bf\",\"type\":\"movie\",\"created\":1491098522429,\"modified\":1491098522667,\"actors\":[{\"firstName\":\"Kate\",\"lastName\":\"Beckinsale\",\"age\":44,\"height\":67},{\"firstName\":\"Bill\",\"lastName\":\"Nighy\",\"age\":68,\"height\":74},{\"firstName\":\"Scott\",\"lastName\":\"Speedman\",\"age\":42,\"height\":71}],\"ID\":\"002\",\"metadata\":{\"path\":\"/movies/5d0cbf0a-1748-11e7-9fee-0ad881f403bf\",\"size\":906},\"title\":\"Underworld Evolution\",\"year\":2006},{\"uuid\":\"7b25a211-1747-11e7-990c-0eec2415f3df\",\"type\":\"movie\",\"created\":1491098143427,\"modified\":1491098143665,\"actors\":[{\"firstName\":\"Kate\",\"lastName\":\"Beckinsale\",\"age\":44,\"height\":67},{\"firstName\":\"Shane\",\"lastName\":\"Brolly\",\"age\":47,\"height\":75},{\"firstName\":\"Scott\",\"lastName\":\"Speedman\",\"age\":42,\"height\":71}],\"ID\":\"001\",\"metadata\":{\"path\":\"/movies/7b25a211-1747-11e7-990c-0eec2415f3df\",\"size\":898},\"title\":\"Underworld\",\"year\":2003}]}"
+				},
+				{
+					"id": "8db060d6-131c-433d-bdb0-4ec380ae7d6a",
+					"name": "failed post ",
+					"originalRequest": {
+						"url": "http://coronach-test.apigee.net/HW4/movies",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7544",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2017 02:40:06 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 167,
+					"body": "{\"message\":\"Cannot read property \\\"actors\\\" from undefined\",\"fileName\":\"/organization/environment/api/api/controllers/movies.js\",\"lineNumber\":55,\"stack\":\"TypeError: Cannot read property \\\"actors\\\" from undefined\\n    at postMovie (/organization/environment/api/api/controllers/movies.js:55)\\n    at swaggerRouter (/organization/environment/api/node_modules/swagger-tools/middleware/swagger-router.js:407)\\n    at swagger_router (/organization/environment/api/node_modules/swagger-node-runner/fittings/swagger_router.js:31)\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:171\\n    at domain.js:183\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:72\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:223\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:135\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:186\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:98\\n    at domain.js:183\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:72\\n    at postFlight (/organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:218)\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:174\\n    at expressCompatibility (/organization/environment/api/node_modules/swagger-node-runner/fittings/express_compatibility.js:41)\\n    at express_compatibility (/organization/environment/api/node_modules/swagger-node-runner/fittings/express_compatibility.js:9)\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:171\\n    at domain.js:183\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:72\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:179\\n    at domain.js:183\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:72\\n    at postFlight (/organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:218)\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:174\\n    at /organization/environment/api/node_modules/swagger-tools/middleware/swagger-validator.js:350\\n    at /organization/environment/api/node_modules/superagent/node_modules/async/lib/async.js:52\\n    at /organization/environment/api/node_modules/superagent/node_modules/async/lib/async.js:361\\n    at /organization/environment/api/node_modules/superagent/node_modules/async/lib/async.js:52\\n    at /organization/environment/api/node_modules/superagent/node_modules/async/lib/async.js:236\\n    at _asyncMap (/organization/environment/api/node_modules/superagent/node_modules/async/lib/async.js:355)\\n    at /organization/environment/api/node_modules/superagent/node_modules/async/lib/async.js:337\\n    at swaggerValidator (/organization/environment/api/node_modules/swagger-tools/middleware/swagger-validator.js:321)\\n    at swagger_validator (/organization/environment/api/node_modules/swagger-node-runner/fittings/swagger_validator.js:14)\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:171\\n    at domain.js:183\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:72\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:223\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:135\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:186\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:98\\n    at domain.js:183\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:72\\n    at postFlight (/organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:218)\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:174\\n    at swaggerSecurity (/organization/environment/api/node_modules/swagger-tools/middleware/swagger-security.js:172)\\n    at swagger_security (/organization/environment/api/node_modules/swagger-node-runner/fittings/swagger_security.js:13)\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:171\\n    at domain.js:183\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:72\\n    at postFlight (/organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:218)\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:174\\n    at cors (/organization/environment/api/node_modules/cors/lib/index.js:179)\\n    at /organization/environment/api/node_modules/cors/lib/index.js:229\\n    at /organization/environment/api/node_modules/cors/lib/index.js:218\\n    at /organization/environment/api/node_modules/cors/lib/index.js:223\\n    at /organization/environment/api/node_modules/cors/lib/index.js:204\\n    at corsMiddleware (/organization/environment/api/node_modules/cors/lib/index.js:209)\\n    at cors (/organization/environment/api/node_modules/swagger-node-runner/fittings/cors.js:15)\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:171\\n    at domain.js:183\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:72\\n    at postFlight (/organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:218)\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:174\\n    at onError (/organization/environment/api/node_modules/bagpipes/lib/fittings/onError.js:27)\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:171\\n    at domain.js:183\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:72\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:223\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:135\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:186\\n    at /organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:59\\n    at domain.js:183\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:72\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:223\\n    at /organization/environment/api/node_modules/pipeworks/pipeworks.js:135\\n    at play (/organization/environment/api/node_modules/bagpipes/lib/bagpipes.js:61)\\n    at adaptToConnect (/organization/environment/api/node_modules/swagger-node-runner/lib/connect_middleware.js:78)\\n    at /organization/environment/api/node_modules/swagger-node-runner/lib/connect_middleware.js:25\\n    at /organization/environment/api/node_modules/swagger-tools/middleware/swagger-metadata.js:333\\n    at /organization/environment/api/node_modules/superagent/node_modules/async/lib/async.js:52\\n    at /organization/environment/api/node_modules/superagent/node_modules/async/lib/async.js:361\\n    at /organization/environment/api/node_modules/superagent/node_modules/async/lib/async.js:52\\n    at done (/organization/environment/api/node_modules/superagent/node_modules/async/lib/async.js:246)\\n    at /organization/environment/api/node_modules/superagent/node_modules/async/lib/async.js:44\\n    at /organization/environment/api/node_modules/superagent/node_modules/async/lib/async.js:358\\n    at /organization/environment/api/node_modules/body-parser/lib/read.js:111\\n    at done (/organization/environment/api/node_modules/raw-body/index.js:248)\\n    at onEnd (/organization/environment/api/node_modules/raw-body/index.js:294)\\n    at g (events.js:180)\\n    at emit (events.js:92)\\n    at _stream_readable.js:943\\n    at _tickDomainCallback (trireme.js:491)\\n    at _tickFromSpinner (trireme.js:422)\\n\"}"
+				}
+			]
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW4/movies",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW4/movies",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Damian\",         \r\n\"lastName\": \"Chapa\",          \r\n\"age\": 54,\r\n\"height\": 71\r\n},    \r\n{ \"firstName\": \"Jesse\",        \r\n\"lastName\": \"Borrego\",         \r\n\"age\": 55,\r\n\"height\": 74\r\n},        \r\n{\"firstName\": \"Benjamin\",          \r\n\"lastName\": \"Bratt\",         \r\n\"age\": 54, \r\n\"height\": 74\t\r\n}],      \r\n\"ID\": \"006\",     \r\n\"title\": \"Blood In, Blood Out\",      \r\n\"year\": 1993   }}\r\n"
+				},
+				"description": "getting all the movies "
+			},
+			"response": [
+				{
+					"id": "b94bd05c-6f4a-4893-9691-1d9a5a4c384d",
+					"name": "failed test with put",
+					"originalRequest": {
+						"url": "http://coronach-test.apigee.net/HW4/movies",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Damian\",         \r\n\"lastName\": \"Chapa\",          \r\n\"age\": 54,\r\n\"height\": 71\r\n},    \r\n{ \"firstName\": \"Jesse\",        \r\n\"lastName\": \"Borrego\",         \r\n\"age\": 55,\r\n\"height\": 74\r\n},        \r\n{\"firstName\": \"Benjamin\",          \r\n\"lastName\": \"Bratt\",         \r\n\"age\": 54, \r\n\"height\": 74\t\r\n}],      \r\n\"ID\": \"006\",     \r\n\"title\": \"Blood In, Blood Out\",      \r\n\"year\": 1993   }}\r\n"
+						}
+					},
+					"status": "Method Not Allowed",
+					"code": 405,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST",
+							"name": "Allow",
+							"description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "133",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2017 02:28:49 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 153,
+					"body": "{\"message\":\"Route defined in Swagger specification (/movies) but there is no defined put operation.\",\"allowedMethods\":[\"GET\",\"POST\"]}"
+				}
+			]
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW4/movies",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW4/movies",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Damian\",         \r\n\"lastName\": \"Chapa\",          \r\n\"age\": 54,\r\n\"height\": 71\r\n},    \r\n{ \"firstName\": \"Jesse\",        \r\n\"lastName\": \"Borrego\",         \r\n\"age\": 55,\r\n\"height\": 74\r\n},        \r\n{\"firstName\": \"Benjamin\",          \r\n\"lastName\": \"Bratt\",         \r\n\"age\": 54, \r\n\"height\": 74\t\r\n}],      \r\n\"ID\": \"006\",     \r\n\"title\": \"Blood In, Blood Out\",      \r\n\"year\": 1993   }}\r\n"
+				},
+				"description": "failed test with put"
+			},
+			"response": [
+				{
+					"id": "c499d8f3-ae62-441e-96a7-4eafaa5c5a57",
+					"name": "failed test with delete",
+					"originalRequest": {
+						"url": "http://coronach-test.apigee.net/HW4/movies",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"enabled": true,
+								"description": "The mime type of this content",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Damian\",         \r\n\"lastName\": \"Chapa\",          \r\n\"age\": 54,\r\n\"height\": 71\r\n},    \r\n{ \"firstName\": \"Jesse\",        \r\n\"lastName\": \"Borrego\",         \r\n\"age\": 55,\r\n\"height\": 74\r\n},        \r\n{\"firstName\": \"Benjamin\",          \r\n\"lastName\": \"Bratt\",         \r\n\"age\": 54, \r\n\"height\": 74\t\r\n}],      \r\n\"ID\": \"006\",     \r\n\"title\": \"Blood In, Blood Out\",      \r\n\"year\": 1993   }}\r\n"
+						}
+					},
+					"status": "Method Not Allowed",
+					"code": 405,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST",
+							"name": "Allow",
+							"description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "136",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2017 02:30:27 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 236,
+					"body": "{\"message\":\"Route defined in Swagger specification (/movies) but there is no defined delete operation.\",\"allowedMethods\":[\"GET\",\"POST\"]}"
+				}
+			]
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW4/movies",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW4/movies",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Damian\",         \r\n\"lastName\": \"Chapa\",          \r\n\"age\": 54,\r\n\"height\": 71\r\n},    \r\n{ \"firstName\": \"Jesse\",        \r\n\"lastName\": \"Borrego\",         \r\n\"age\": 55,\r\n\"height\": 74\r\n},        \r\n{\"firstName\": \"Benjamin\",          \r\n\"lastName\": \"Bratt\",         \r\n\"age\": 54, \r\n\"height\": 74\t\r\n}],      \r\n\"ID\": \"006\",     \r\n\"title\": \"Blood In, Blood Out\",      \r\n\"year\": 1993   }}\r\n"
+				},
+				"description": "failed test with delete"
+			},
+			"response": []
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW4/movies",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW4/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "failed post "
+			},
+			"response": []
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW4/movies/180440fc-174a-11e7-a2c2-122e0737977d",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW4/movies/180440fc-174a-11e7-a2c2-122e0737977d",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "finding a movie using the ID"
+			},
+			"response": [
+				{
+					"id": "14cf2d46-0114-47f1-a694-b1a036281d18",
+					"name": "failed test with post",
+					"originalRequest": {
+						"url": "http://coronach-test.apigee.net/HW4/movies/180440fc-174a-11e7-a2c2-122e0737977d",
+						"method": "POST",
+						"header": [],
+						"body": {}
+					},
+					"status": "Method Not Allowed",
+					"code": 405,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, GET, PUT",
+							"name": "Allow",
+							"description": "Valid actions for a specified resource. To be used for a 405 Method not allowed"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "147",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2017 02:48:20 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 157,
+					"body": "{\"message\":\"Route defined in Swagger specification (/movies/{ID}) but there is no defined post operation.\",\"allowedMethods\":[\"DELETE\",\"GET\",\"PUT\"]}"
+				},
+				{
+					"id": "83056506-26e6-41b6-a17b-bb289381cb28",
+					"name": "changed the name of the movie",
+					"originalRequest": {
+						"url": "http://coronach-test.apigee.net/HW4/movies/180440fc-174a-11e7-a2c2-122e0737977d",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								"{",
+								" ",
+								"\"",
+								"m",
+								"o",
+								"v",
+								"i",
+								"e",
+								"\"",
+								":",
+								" ",
+								"{",
+								"\r",
+								"\n",
+								"\"",
+								"a",
+								"c",
+								"t",
+								"o",
+								"r",
+								"s",
+								"\"",
+								":",
+								" ",
+								"\r",
+								"\n",
+								"[",
+								"{",
+								"\r",
+								"\n",
+								"\"",
+								"f",
+								"i",
+								"r",
+								"s",
+								"t",
+								"N",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"T",
+								"o",
+								"m",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"l",
+								"a",
+								"s",
+								"t",
+								"N",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"H",
+								"a",
+								"r",
+								"d",
+								"y",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"a",
+								"g",
+								"e",
+								"\"",
+								":",
+								" ",
+								"4",
+								"0",
+								",",
+								"\r",
+								"\n",
+								"\"",
+								"h",
+								"e",
+								"i",
+								"g",
+								"h",
+								"t",
+								"\"",
+								":",
+								" ",
+								"6",
+								"9",
+								"\r",
+								"\n",
+								"}",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"{",
+								" ",
+								"\"",
+								"f",
+								"i",
+								"r",
+								"s",
+								"t",
+								"N",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"C",
+								"h",
+								"a",
+								"r",
+								"l",
+								"i",
+								"z",
+								"e",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"l",
+								"a",
+								"s",
+								"t",
+								"N",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"T",
+								"h",
+								"e",
+								"r",
+								"o",
+								"n",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"a",
+								"g",
+								"e",
+								"\"",
+								":",
+								" ",
+								"4",
+								"2",
+								",",
+								"\r",
+								"\n",
+								"\"",
+								"h",
+								"e",
+								"i",
+								"g",
+								"h",
+								"t",
+								"\"",
+								":",
+								" ",
+								"6",
+								"9",
+								"\r",
+								"\n",
+								"}",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"{",
+								"\"",
+								"f",
+								"i",
+								"r",
+								"s",
+								"t",
+								"N",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"N",
+								"i",
+								"c",
+								"h",
+								"o",
+								"l",
+								"a",
+								"s",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"l",
+								"a",
+								"s",
+								"t",
+								"N",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"H",
+								"o",
+								"u",
+								"l",
+								"t",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"a",
+								"g",
+								"e",
+								"\"",
+								":",
+								" ",
+								"2",
+								"8",
+								",",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"h",
+								"e",
+								"i",
+								"g",
+								"h",
+								"t",
+								"\"",
+								":",
+								" ",
+								"7",
+								"4",
+								"\t",
+								"\r",
+								"\n",
+								"}",
+								"]",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"I",
+								"D",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"0",
+								"0",
+								"4",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"t",
+								"i",
+								"t",
+								"l",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"U",
+								"s",
+								"i",
+								"n",
+								"g",
+								" ",
+								"P",
+								"U",
+								"T",
+								" ",
+								"t",
+								"o",
+								" ",
+								"c",
+								"h",
+								"n",
+								"a",
+								"g",
+								"e",
+								" ",
+								"t",
+								"h",
+								"e",
+								" ",
+								"n",
+								"a",
+								"m",
+								"e",
+								" ",
+								"o",
+								"f",
+								" ",
+								"t",
+								"h",
+								"e",
+								" ",
+								"m",
+								"o",
+								"v",
+								"i",
+								"e",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"y",
+								"e",
+								"a",
+								"r",
+								"\"",
+								":",
+								" ",
+								"2",
+								"0",
+								"1",
+								"5",
+								" ",
+								" ",
+								" ",
+								" ",
+								"}",
+								"}",
+								"\r",
+								"\n"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1598",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2017 02:52:05 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"63e-lCYax5YtgRHqbWfRsdfGbzitm1I\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 851,
+					"body": "{\"message\":\"a movie has been successfully updated\",\"movie\":{\"statusCode\":200,\"body\":{\"action\":\"post\",\"application\":\"b1013b47-1642-11e7-990c-0eec2415f3df\",\"params\":{},\"path\":\"/movies\",\"uri\":\"https://apibaas-trial.apigee.net/coronach/sandbox/movies\",\"entities\":[{\"uuid\":\"5ab388c4-174f-11e7-9fee-0ad881f403bf\",\"type\":\"movie\",\"created\":1491101524966,\"modified\":1491101524966,\"actors\":[{\"firstName\":\"Tom\",\"lastName\":\"Hardy\",\"age\":40,\"height\":69},{\"firstName\":\"Charlize\",\"lastName\":\"Theron\",\"age\":42,\"height\":69},{\"firstName\":\"Nicholas\",\"lastName\":\"Hoult\",\"age\":28,\"height\":74}],\"ID\":\"004\",\"metadata\":{\"path\":\"/movies/5ab388c4-174f-11e7-9fee-0ad881f403bf\",\"size\":961},\"title\":\"Using PUT to chnage the name of the movie\",\"year\":2015}],\"timestamp\":1491101524956,\"duration\":37,\"organization\":\"coronach\",\"applicationName\":\"sandbox\"},\"headers\":{\"access-control-allow-origin\":\"*\",\"content-type\":\"application/json\",\"date\":\"Sun, 02 Apr 2017 02:52:04 GMT\",\"server\":\"Apache-Coyote/1.1\",\"set-cookie\":[\"rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Sat, 01-Apr-2017 02:52:04 GMT\"],\"content-length\":\"1008\",\"connection\":\"keep-alive\"},\"request\":{\"uri\":{\"protocol\":\"https:\",\"slashes\":true,\"auth\":null,\"host\":\"apibaas-trial.apigee.net\",\"port\":443,\"hostname\":\"apibaas-trial.apigee.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/coronach/sandbox/movie/\",\"path\":\"/coronach/sandbox/movie/\",\"href\":\"https://apibaas-trial.apigee.net/coronach/sandbox/movie/\"},\"method\":\"POST\",\"headers\":{\"User-Agent\":\"usergrid-nodejs/v2.0.0-rc.2\",\"accept\":\"application/json\",\"content-type\":\"application/json\",\"content-length\":466}}}}"
+				}
+			]
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW4/movies/180440fc-174a-11e7-a2c2-122e0737977d",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW4/movies/180440fc-174a-11e7-a2c2-122e0737977d",
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": "failed test with post"
+			},
+			"response": []
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW4/movies/180440fc-174a-11e7-a2c2-122e0737977d",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW4/movies/180440fc-174a-11e7-a2c2-122e0737977d",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Tom\",         \r\n\"lastName\": \"Hardy\",          \r\n\"age\": 40,\r\n\"height\": 69\r\n},    \r\n{ \"firstName\": \"Charlize\",        \r\n\"lastName\": \"Theron\",         \r\n\"age\": 42,\r\n\"height\": 69\r\n},        \r\n{\"firstName\": \"Nicholas\",          \r\n\"lastName\": \"Hoult\",         \r\n\"age\": 28, \r\n\"height\": 74\t\r\n}],      \r\n\"ID\": \"004\",     \r\n\"title\": \"Using PUT to chnage the name of the movie\",      \r\n\"year\": 2015    }}\r\n"
+				},
+				"description": "changed the name of the movie"
+			},
+			"response": [
+				{
+					"id": "98ddea31-9b87-4ed7-a58b-31d9f0e3779b",
+					"name": "deleting the movie",
+					"originalRequest": {
+						"url": "http://coronach-test.apigee.net/HW4/movies/180440fc-174a-11e7-a2c2-122e0737977d",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								"{",
+								" ",
+								"\"",
+								"m",
+								"o",
+								"v",
+								"i",
+								"e",
+								"\"",
+								":",
+								" ",
+								"{",
+								"\r",
+								"\n",
+								"\"",
+								"a",
+								"c",
+								"t",
+								"o",
+								"r",
+								"s",
+								"\"",
+								":",
+								" ",
+								"\r",
+								"\n",
+								"[",
+								"{",
+								"\r",
+								"\n",
+								"\"",
+								"f",
+								"i",
+								"r",
+								"s",
+								"t",
+								"N",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"T",
+								"o",
+								"m",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"l",
+								"a",
+								"s",
+								"t",
+								"N",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"H",
+								"a",
+								"r",
+								"d",
+								"y",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"a",
+								"g",
+								"e",
+								"\"",
+								":",
+								" ",
+								"4",
+								"0",
+								",",
+								"\r",
+								"\n",
+								"\"",
+								"h",
+								"e",
+								"i",
+								"g",
+								"h",
+								"t",
+								"\"",
+								":",
+								" ",
+								"6",
+								"9",
+								"\r",
+								"\n",
+								"}",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"{",
+								" ",
+								"\"",
+								"f",
+								"i",
+								"r",
+								"s",
+								"t",
+								"N",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"C",
+								"h",
+								"a",
+								"r",
+								"l",
+								"i",
+								"z",
+								"e",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"l",
+								"a",
+								"s",
+								"t",
+								"N",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"T",
+								"h",
+								"e",
+								"r",
+								"o",
+								"n",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"a",
+								"g",
+								"e",
+								"\"",
+								":",
+								" ",
+								"4",
+								"2",
+								",",
+								"\r",
+								"\n",
+								"\"",
+								"h",
+								"e",
+								"i",
+								"g",
+								"h",
+								"t",
+								"\"",
+								":",
+								" ",
+								"6",
+								"9",
+								"\r",
+								"\n",
+								"}",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"{",
+								"\"",
+								"f",
+								"i",
+								"r",
+								"s",
+								"t",
+								"N",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"N",
+								"i",
+								"c",
+								"h",
+								"o",
+								"l",
+								"a",
+								"s",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"l",
+								"a",
+								"s",
+								"t",
+								"N",
+								"a",
+								"m",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"H",
+								"o",
+								"u",
+								"l",
+								"t",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"a",
+								"g",
+								"e",
+								"\"",
+								":",
+								" ",
+								"2",
+								"8",
+								",",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"h",
+								"e",
+								"i",
+								"g",
+								"h",
+								"t",
+								"\"",
+								":",
+								" ",
+								"7",
+								"4",
+								"\t",
+								"\r",
+								"\n",
+								"}",
+								"]",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"I",
+								"D",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"0",
+								"0",
+								"4",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"t",
+								"i",
+								"t",
+								"l",
+								"e",
+								"\"",
+								":",
+								" ",
+								"\"",
+								"U",
+								"s",
+								"i",
+								"n",
+								"g",
+								" ",
+								"P",
+								"U",
+								"T",
+								" ",
+								"t",
+								"o",
+								" ",
+								"c",
+								"h",
+								"n",
+								"a",
+								"g",
+								"e",
+								" ",
+								"t",
+								"h",
+								"e",
+								" ",
+								"n",
+								"a",
+								"m",
+								"e",
+								" ",
+								"o",
+								"f",
+								" ",
+								"t",
+								"h",
+								"e",
+								" ",
+								"m",
+								"o",
+								"v",
+								"i",
+								"e",
+								"\"",
+								",",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								" ",
+								"\r",
+								"\n",
+								"\"",
+								"y",
+								"e",
+								"a",
+								"r",
+								"\"",
+								":",
+								" ",
+								"2",
+								"0",
+								"1",
+								"5",
+								" ",
+								" ",
+								" ",
+								" ",
+								"}",
+								"}",
+								"\r",
+								"\n"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1629",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2017 02:52:47 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"65d-aUCBEGmlaaWN3EVGFhtxAFYNdMI\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Server",
+							"value": "Apigee Router",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 252,
+					"body": "{\"message\":\"movie deleted\",\"movie\":{\"statusCode\":200,\"body\":{\"action\":\"delete\",\"application\":\"b1013b47-1642-11e7-990c-0eec2415f3df\",\"params\":{},\"path\":\"/movies\",\"uri\":\"https://apibaas-trial.apigee.net/coronach/sandbox/movies\",\"entities\":[{\"uuid\":\"180440fc-174a-11e7-a2c2-122e0737977d\",\"type\":\"movie\",\"created\":1491099265604,\"modified\":1491099265841,\"actors\":[{\"firstName\":\"Tom\",\"lastName\":\"Hardy\",\"age\":40,\"height\":69},{\"firstName\":\"Charlize\",\"lastName\":\"Theron\",\"age\":42,\"height\":69},{\"firstName\":\"Nicholas\",\"lastName\":\"Hoult\",\"age\":28,\"height\":74}],\"ID\":\"004\",\"metadata\":{\"path\":\"/movies/180440fc-174a-11e7-a2c2-122e0737977d\",\"size\":903},\"title\":\"Mad Max: Fury Road\",\"year\":2015}],\"timestamp\":1491101567167,\"duration\":26,\"organization\":\"coronach\",\"applicationName\":\"sandbox\"},\"headers\":{\"access-control-allow-origin\":\"*\",\"content-type\":\"application/json\",\"date\":\"Sun, 02 Apr 2017 02:52:47 GMT\",\"server\":\"Apache-Coyote/1.1\",\"set-cookie\":[\"rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Sat, 01-Apr-2017 02:52:47 GMT\"],\"content-length\":\"987\",\"connection\":\"keep-alive\"},\"request\":{\"uri\":{\"protocol\":\"https:\",\"slashes\":true,\"auth\":null,\"host\":\"apibaas-trial.apigee.net\",\"port\":443,\"hostname\":\"apibaas-trial.apigee.net\",\"hash\":null,\"search\":null,\"query\":null,\"pathname\":\"/coronach/sandbox/movies/180440fc-174a-11e7-a2c2-122e0737977d\",\"path\":\"/coronach/sandbox/movies/180440fc-174a-11e7-a2c2-122e0737977d\",\"href\":\"https://apibaas-trial.apigee.net/coronach/sandbox/movies/180440fc-174a-11e7-a2c2-122e0737977d\"},\"method\":\"DELETE\",\"headers\":{\"User-Agent\":\"usergrid-nodejs/v2.0.0-rc.2\",\"accept\":\"application/json\",\"content-length\":0}}}}"
+				}
+			]
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW4/movies/180440fc-174a-11e7-a2c2-122e0737977d",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW4/movies/180440fc-174a-11e7-a2c2-122e0737977d",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Tom\",         \r\n\"lastName\": \"Hardy\",          \r\n\"age\": 40,\r\n\"height\": 69\r\n},    \r\n{ \"firstName\": \"Charlize\",        \r\n\"lastName\": \"Theron\",         \r\n\"age\": 42,\r\n\"height\": 69\r\n},        \r\n{\"firstName\": \"Nicholas\",          \r\n\"lastName\": \"Hoult\",         \r\n\"age\": 28, \r\n\"height\": 74\t\r\n}],      \r\n\"ID\": \"004\",     \r\n\"title\": \"Using PUT to chnage the name of the movie\",      \r\n\"year\": 2015    }}\r\n"
+				},
+				"description": "deleting the movie"
+			},
+			"response": []
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW4/movies/05bf0303-1756-11e7-990c-0eec2415f3df",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW4/movies/05bf0303-1756-11e7-990c-0eec2415f3df",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Kate\",         \r\n\"lastName\": \"Beckinsale\",          \r\n\"age\": 44,\r\n\"height\": 67\r\n},    \r\n{ \"firstName\": \"Tobias\",        \r\n\"lastName\": \"Menzies\",         \r\n\"age\": 43,\r\n\"height\": 73\r\n},        \r\n{\"firstName\": \"Theo\",          \r\n\"lastName\": \"James\",         \r\n\"age\": 33, \r\n\"height\": 72\t\r\n}],      \r\n\"ID\": \"099\",     \r\n\"title\": \"test for the eput jkdsbfkjsdhfkj\",      \r\n\"year\": 2016    }}\r\n"
+				},
+				"description": "second delete"
+			},
+			"response": []
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW5/movies",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW5/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Sal\",         \r\n\"lastName\": \"Lopez\",          \r\n\"age\": 44,\r\n\"height\": 67\r\n},    \r\n{ \"firstName\": \"William\",        \r\n\"lastName\": \"Forsythe\",         \r\n\"age\": 43,\r\n\"height\": 73\r\n},        \r\n{\"firstName\": \"Edward\",          \r\n\"lastName\": \"Olmos\",         \r\n\"age\": 33, \r\n\"height\": 72\t\r\n}],      \r\n\"ID\": \"006\",     \r\n\"name\": \"American Me\",      \r\n\"year\": 1992    }}\r\n"
+				},
+				"description": "movie created with new code for dups"
+			},
+			"response": []
+		},
+		{
+			"name": "http://coronach-test.apigee.net/HW5/movies",
+			"request": {
+				"url": "http://coronach-test.apigee.net/HW5/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"movie\": {\r\n\"actors\": \r\n[{\r\n\"firstName\": \"Sal\",         \r\n\"lastName\": \"Lopez\",          \r\n\"age\": 44,\r\n\"height\": 67\r\n},    \r\n{ \"firstName\": \"William\",        \r\n\"lastName\": \"Forsythe\",         \r\n\"age\": 43,\r\n\"height\": 73\r\n},        \r\n{\"firstName\": \"Edward\",          \r\n\"lastName\": \"Olmos\",         \r\n\"age\": 33, \r\n\"height\": 72\t\r\n}],      \r\n\"ID\": \"006\",     \r\n\"name\": \"American Me\",      \r\n\"year\": 1992    }}\r\n"
+				},
+				"description": "dup movie"
+			},
+			"response": []
+		}
+	]
+}

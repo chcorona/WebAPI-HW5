@@ -1,0 +1,287 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: HW5 Movie Database with reviews
+# during dev, should point to your local machine
+host: localhost:10010
+# basePath prefixes all resource paths
+basePath: /
+#
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /hello:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: hello_world
+    get:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: hello
+      parameters:
+        - name: name
+          in: query
+          description: The name of the person to whom to say hello
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /movies:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: movies
+    get:
+      description: gets all the movies listed
+      # used as the method name of the controller
+      operationId: getMovies
+      parameters:
+        - name: ID
+          in: query
+          description: it should show the movies by their ID
+          type: string
+      responses:
+        "200":
+          description: Success, all movies listed
+          schema:
+            $ref: "#/definitions/MovieListBody"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    post:
+      description: Creates one new movie to be entered
+      operationId: postMovie
+      parameters:
+        - name: movie
+          in: body
+          required: true
+          description: Creates one new movie to be entered
+          schema:
+            $ref: "#/definitions/MovieBody"
+      responses:
+        "200":
+          description: Success, a movie has been entered
+          schema:
+            $ref: "#/definitions/MovieBody"
+        default:
+          description: error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /reviews/{ID}:
+    x-swagger-router-controller: movies
+    delete:
+      description: Delete a movie from the database.
+      operationId: delReview
+      parameters:
+        - name: ID
+          required: true
+          in: path
+          type: string
+      responses:
+        "200":
+          description: Removes a review.
+          schema:
+            $ref: "#/definitions/Review"
+        default:
+          description: error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /movies/{ID}:
+    x-swagger-router-controller: movies
+    get:
+      description: gets a movie by the ID entered
+      operationId: getMovieID
+      parameters:
+        - name: ID
+          required: true
+          in: path
+          description: it should show the movies by its ID
+          type: string
+        - name: reviews
+          required: false
+          in: query
+          type: boolean
+          default: false
+      responses:
+        "200":
+          description: Success, the movie is listed
+          schema:
+            $ref: "#/definitions/MovieBody"
+        default:
+          description: error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    put:
+      description: changing the record for this movie
+      operationId: putMovieID
+      parameters:
+        - name: ID
+          required: true
+          in: path
+          type: string
+        - name: movie
+          required: true
+          in: body
+          description: the record has been updated
+          schema:
+            $ref: "#/definitions/MovieBody"
+      responses:
+        "200":
+          description: Success, it has been updated
+          schema:
+            $ref: "#/definitions/MovieBody"
+        default:
+          description: error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    post:
+      description: Add a review to a movie
+      operationId: addReview
+      parameters:
+        - name: ID
+          required: true
+          in: path
+          type: string
+        - name: review
+          required: true
+          in: body
+          description: A review to add to the database
+          schema:
+            $ref: "#/definitions/Review"
+      responses:
+        "200":
+          description: Movie review post was successful.
+          schema:
+            $ref: "#/definitions/MovieBody"
+        default:
+          description: error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+    delete:
+      description: deleting a movie
+      operationId: delMovieID
+      parameters:
+        - name: ID
+          required: true
+          in: path
+          description: deleting a movie
+          type: string
+      responses:
+        "200":
+          description: success, a movie has been deleted
+          schema:
+            $ref: "#/definitions/MovieBody"
+        default:
+          description: error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /swagger:
+    x-swagger-pipe: swagger_raw
+# complex objects have schema definitions
+definitions:
+  HelloWorldResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  MovieListBody:
+    properties:
+      movie:
+        type: array
+        items:
+          $ref: "#/definitions/Movie"
+  MovieBody:
+    properties:
+      uuid:
+        type: string
+      type:
+        type: string
+      created:
+        type: integer
+      modified:
+        type: integer
+      metadata:
+        properties:
+          path:
+            type: string
+          size:
+            type: integer
+      movies:
+        $ref: "#/definitions/Movie"
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  Movie:
+    required:
+      - ID
+      - name
+      - year
+      - actors
+    properties:
+      actors:
+        type: array
+        items:
+          $ref: "#/definitions/Actor"
+      year:
+        type: integer
+        minimum: 1
+      ID:
+        type: integer
+      name:
+        type: string
+  Actor:
+    required:
+      - firstName
+      - lastName
+    properties:
+      firstName:
+        type: string
+      lastName:
+        type: string
+      age:
+        type: integer
+      height:
+        type: integer
+  Review:
+    required:
+      - review
+      - score
+      - reviewer
+    properties:
+      reviewer:
+        type: string
+      movie:
+        type: string
+      review:
+        type: string
+      score:
+        type: integer
+        minimum: 1
+        maximum: 5
+        default: 3
+  ReviewList:
+    properties:
+      Review:
+        type: array
+        items:
+          $ref: "#/definitions/Review"
